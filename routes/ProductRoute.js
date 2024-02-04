@@ -6,7 +6,7 @@ import isAdmin from '../middlewares/isAdmin.js';
 
 const productsRouter = express.Router();
 
-productsRouter.post('/',isLoggedIn, upload.array('files') ,createProductCtrl);
+productsRouter.post('/',isLoggedIn, isAdmin,upload.array('files') ,createProductCtrl);
 productsRouter.get('/', getProductsCtrl);
 productsRouter.get('/:id', getProductCtrl);
 productsRouter.put('/:id',isLoggedIn ,updateProductCtrl);

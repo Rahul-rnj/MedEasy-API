@@ -56,7 +56,6 @@ const OrderSchema = new Schema(
   }
 );
 
-//compile to form model
 const Order = mongoose.model("Order", OrderSchema);
 
 export default Order;
